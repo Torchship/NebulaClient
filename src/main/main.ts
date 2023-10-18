@@ -7,11 +7,14 @@ function createWindow () {
     height: 600,
     webPreferences: {
       preload: join(__dirname, 'preload.js'),
-      nodeIntegration: false,
-      contextIsolation: true,
+      nodeIntegration: true,
+      contextIsolation: false,
     }
   });
 
+  mainWindow.setMenuBarVisibility(false);
+  mainWindow.maximize();
+  
   if (process.env.NODE_ENV === 'development') {
     const rendererPort = process.argv[2];
     mainWindow.loadURL(`http://localhost:${rendererPort}`);
