@@ -21,6 +21,10 @@
     width: 100%;
     height: 100%;
     box-sizing: border-box;
+
+    background-color: #0C1014;
+    background-image: radial-gradient(#576C6E 0.3px, transparent 0.6px);
+    background-size: 25px 25px;
   }
   </style>
   
